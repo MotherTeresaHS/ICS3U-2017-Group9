@@ -6,6 +6,9 @@
 from scene import *
 import ui
 
+from game_scene import *
+from help_scene import *
+
 
 class MainMenuScene(Scene):
     def setup(self):
@@ -16,6 +19,28 @@ class MainMenuScene(Scene):
                                      color = 'white', 
                                      parent = self, 
                                      size = self.size)
+                                     
+                                
+        self.start_button = SpriteNode('./assets/sprites/start_button.png',
+                                       parent = self,
+                                       position = self.size/1.4,
+                                       scale = 1.5)
+                                       
+        help_button_position = self.size/1.4
+        help_button_position.y = help_button_position.y - 100
+        self.help_button = SpriteNode('./assets/sprites/help_button.png',
+                                       parent = self,
+                                       position = help_button_position,
+                                       scale = 1.5)
+        
+        credit_button_position = self.size/1.4
+        credit_button_position.y = credit_button_position.y - 50
+        self.credit_button = SpriteNode('./assets/sprites/credit_button.png',
+                                       parent = self,
+                                       position = credit_button_position,
+                                       scale = 1.5)
+        
+    
     
     def update(self):
         # this method is called, hopefully, 60 times a second
