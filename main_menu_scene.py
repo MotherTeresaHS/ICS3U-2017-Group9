@@ -16,7 +16,7 @@ class MainMenuScene(Scene):
         
         # add background color
         self.background = SpriteNode(position = self.size / 2, 
-                                     color = 'white', 
+                                     color = '#39b1ff', 
                                      parent = self, 
                                      size = self.size)
                                      
