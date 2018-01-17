@@ -1,4 +1,4 @@
-# Created by: Mr. Coxall
+# Created by: Younes Elfeitori and Joe 
 # Created on: Sep 2016
 # Created for: ICS3U
 # This program is the first file in a multi-scene game template
