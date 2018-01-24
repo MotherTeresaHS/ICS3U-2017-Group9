@@ -7,7 +7,6 @@ from scene import *
 import ui
 import sound
 from numpy import random
-from game_over_scene import *
 from main_menu_scene import *
 #from copy import deepcopy
 #counter = 0
