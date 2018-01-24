@@ -3,31 +3,45 @@ import ui
 
 from main_menu_scene import *
 
-
 class HelpScene(Scene):
     def setup(self):
         # this method is called, when user moves to this scene
+        self.size_of_screen_x = self.size.x
+        self.size_of_screen_y = self.size.y
+        self.screen_center_x = self.size_of_screen_x/2
+        self.screen_center_y = self.size_of_screen_y/2
         
         center_of_screen = self.size/2
         
         # add background color
         self.background = SpriteNode(position = self.size / 2, 
-                                     color = '#39b1ff', 
+                                     color = '#00cdff', 
                                      parent = self, 
                                      size = self.size)
                                      
-        self.start_button = LabelNode(text = 'Use the up and down buttons to move your fish and dodge the hunters!',
+        
+        start_button_position = Vector2()
+        start_button_position.x = self.screen_center_x 
+        start_button_position.y = self.screen_center_y + 100
+        self.start_button = LabelNode(text = 'Use the up and down buttons to move your fish ',
+                                      font=('Helvetica', 20),
+                                      parent = self,
+                                      position = start_button_position,
+                                      scale = 1.75)
+                                      
+        self.start_button = LabelNode(text = '& dodge the hunters!',
                                       font=('Helvetica', 20),
                                       parent = self,
                                       position = self.size / 2,
-                                      scale = 0.75)
+                                      scale = 1.75)
                                       
         back_button_position = self.size
         back_button_position.x = 100
         back_button_position.y = back_button_position.y - 100
         self.back_button = SpriteNode('./assets/sprites/back_button.png',
                                        parent = self,
-                                       position = back_button_position)
+                                       position = back_button_position,
+                                       scale = 0.15)
         
     def update(self):
         # this method is called, hopefully, 60 times a second
