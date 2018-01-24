@@ -12,7 +12,7 @@ class CreditScene(Scene):
         
         # add background color
         self.background = SpriteNode(position = self.size / 2,
-                                     color = '#39b1ff',
+                                     color = '#00deff',
                                      parent = self,
                                      size = self.size)
                                      
@@ -26,7 +26,8 @@ class CreditScene(Scene):
         back_button_position.y = back_button_position.y - 100
         self.back_button = SpriteNode('./assets/sprites/back_button.png',
                                        parent = self,
-                                       position = back_button_position)
+                                       position = back_button_position,
+                                       scale = 0.15)
         
     def update(self):
         # this method is called, hopefully, 60 times a second
